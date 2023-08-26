@@ -9,7 +9,7 @@
           <a href="#">
             <img
               class="h-50 rounded-t-lg object-cover"
-              src="https://ecommerce.olipiskandar.com/public/uploads/all/UpUx213sXC5XBW07vbXn1vkWMWxTu95CDDbMzwkF.jpg"
+              src="../assets/11.jpg"
               alt="product image"
             />
           </a>

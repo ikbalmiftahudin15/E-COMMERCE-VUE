@@ -23,16 +23,7 @@
               </div>
             </li>
 
-            <li class="text-left">
-              <div class="flex items-center">
-                <span class="mx-2 text-gray-400">/</span>
-                <div class="-m-1">
-                  <a href="#"
-                    class="rounded-md p-1 text-sm font-medium text-gray-600 focus:text-gray-900 focus:shadow hover:text-gray-800"
-                    aria-current="page"> Coffee </a>
-                </div>
-              </div>
-            </li>
+            
           </ol>
         </nav>
 
@@ -41,24 +32,25 @@
             <div class="lg:flex lg:items-start">
               <div class="lg:order-2 lg:ml-5">
                 <div class="max-w-xl overflow-hidden rounded-lg">
-                  <img class="h-full w-full max-w-full object-cover" src="" alt="" />
+                  <img class="h-full w-full max-w-full object-cover" src="../assets/11.jpg" alt="" />
                 </div>
               </div>
 
+
               <div class="mt-2 w-full lg:order-1 lg:w-32 lg:flex-shrink-0">
                 <div class="flex flex-row items-start lg:flex-col">
-                  <!-- <button type="button"
+                  <button type="button"
                     class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-gray-900 text-center">
-                    <img class="h-full w-full object-cover" src="/images/JHxMnVrtPMdcNU1s_7g7f.png" alt="" />
+                    <img class="h-full w-full object-cover" src="../assets/11.jpg" alt="" />
                   </button>
                   <button type="button"
                     class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
-                    <img class="h-full w-full object-cover" src="/images/JHxMnVrtPMdcNU1s_7g7f.png" alt="" />
+                    <img class="h-full w-full object-cover" src="../assets/11.jpg" alt="" />
                   </button>
                   <button type="button"
                     class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
-                    <img class="h-full w-full object-cover" src="/images/JHxMnVrtPMdcNU1s_7g7f.png" alt="" />
-                  </button> -->
+                    <img class="h-full w-full object-cover" src="../assets/11.jpg" alt="" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -100,55 +92,9 @@
                     class=""></path>
                 </svg>
               </div>
-              <p class="ml-2 text-sm font-medium text-gray-500">1,209 Reviews</p>
             </div>
 
-            <h2 class="mt-8 text-base text-gray-900">Coffee Type</h2>
-            <div class="mt-3 flex select-none flex-wrap items-center gap-1">
-              <label class="">
-                <input type="radio" name="type" value="Powder" class="peer sr-only" checked />
-                <p
-                  class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
-                  Powder</p>
-              </label>
-              <label class="">
-                <input type="radio" name="type" value="Whole Bean" class="peer sr-only" />
-                <p
-                  class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
-                  Whole Bean</p>
-              </label>
-              <label class="">
-                <input type="radio" name="type" value="Groud" class="peer sr-only" />
-                <p
-                  class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
-                  Groud</p>
-              </label>
-            </div>
 
-            <h2 class="mt-8 text-base text-gray-900">Choose subscription</h2>
-            <div class="mt-3 flex select-none flex-wrap items-center gap-1">
-              <label class="">
-                <input type="radio" name="subscription" value="4 Months" class="peer sr-only" />
-                <p
-                  class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
-                  4 Months</p>
-                <span class="mt-1 block text-center text-xs">$80/mo</span>
-              </label>
-              <label class="">
-                <input type="radio" name="subscription" value="8 Months" class="peer sr-only" checked />
-                <p
-                  class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
-                  8 Months</p>
-                <span class="mt-1 block text-center text-xs">$60/mo</span>
-              </label>
-              <label class="">
-                <input type="radio" name="subscription" value="12 Months" class="peer sr-only" />
-                <p
-                  class="peer-checked:bg-black peer-checked:text-white rounded-lg border border-black px-6 py-2 font-bold">
-                  12 Months</p>
-                <span class="mt-1 block text-center text-xs">$40/mo</span>
-              </label>
-            </div>
 
             <!-- counter -->
             <div class="flex items-center mt-5">
@@ -235,22 +181,12 @@
 
                 <a href="#" title=""
                   class="inline-flex items-center border-b-2 border-transparent py-4 text-sm font-medium text-gray-600">
-                  Reviews
-                  <span class="ml-2 block rounded-full bg-gray-500 px-2 py-px text-xs font-bold text-gray-100"> 1,209
-                  </span>
+                 
+
                 </a>
               </nav>
             </div>
 
-            <div class="mt-8 flow-root sm:mt-12">
-              <h1 class="text-3xl font-bold">Delivered To Your Door</h1>
-              <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia accusantium nesciunt fuga.</p>
-              <h1 class="mt-8 text-3xl font-bold">From the Fine Farms of Brazil</h1>
-              <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio numquam enim facere.</p>
-              <p class="mt-4">Amet consectetur adipisicing elit. Optio numquam enim facere. Lorem ipsum dolor sit amet
-                consectetur, adipisicing elit. Dolore rerum nostrum eius facere, ad neque.</p>
-               
-            </div>
           </div>
         </div>
       </div>

@@ -32,22 +32,17 @@ const routes = [
     {
         path: "/cart",
         name: "Cart",
-        component: Cart,
-        
+        component: () => import("../views/Cart.vue"),
+        meta: { requiresLogin: true },
     },
   
     {
         path: "/checkout",
         name: "Checkout",
-        component: Checkout,
-        
+        component: () => import("../views/Checkout.vue"),
+        meta: { requiresLogin: true },
     },
-    {
-        path: "/contact",
-        name: "Contact",
-        component: Contact,
-        
-    },
+  
     {
         path: "/profile",
         name: "Profile",
@@ -77,6 +72,12 @@ const routes = [
         path: "/register",
         name: "Register",
         component: Register,
+      
+    },
+    {
+        path: "/kontak",
+        name: "Contact",
+        component: Contact,
       
     },
 ]
