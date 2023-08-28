@@ -6,7 +6,7 @@
       <div class="rounded-lg md:w-2/3">
         <div v-for="cart in getCart" :key="cart.cart_id">
         <div class="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
-          <img src="https://ecommerce.olipiskandar.com/public/uploads/all/UpUx213sXC5XBW07vbXn1vkWMWxTu95CDDbMzwkF.jpg" alt="product-image" class="w-full rounded-lg sm:w-40" />
+          <img src="../assets/5.jpg" alt="product-image" class="w-full rounded-lg sm:w-40" />
           <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
             <div class="mt-5 sm:mt-0">
               <h2 class="text-lg font-bold text-gray-900">{{ cart.name }}</h2>
@@ -26,10 +26,9 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-<!-- 
+              <!-- 
               <div class="mx-auto flex h-8 items-stretch text-grey-600">
-                <button class="flex items-center justify-center rounded-1-md bg-gray-200 px-4 transition hopver:bg-black hover:text-withe">-</button>
-                
+                <button class="flex items-center justify-center rounded-1-md bg-gray-200 px-4 transition hopver:bg-black hover:text-withe">-</button>                
               </div> -->
 
               </div>

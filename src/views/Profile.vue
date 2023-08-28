@@ -1,60 +1,64 @@
 <template>
-    <br>
-    <br>
- <div class="mx-2 my-10 rounded-xl border bg-white px-4 shadow-md sm:mx-auto sm:max-w-xl sm:px-8">
-  <div class="mb-2 flex flex-col gap-y-6 border-b py-8 sm:flex-row sm:items-center sm:justify-between">
-    <div class="flex items-center">
-      <img class="h-14 w-14 rounded-full object-cover" src="https://img.freepik.com/free-vector/man-shows-gesture-great-idea_10045-637.jpg?w=740&t=st=1692761638~exp=1692762238~hmac=955e1fc46c0ea176694849c4c931f4a383f86804dc2db237b0211392259f3e70" alt="Simon Lewis" />
-      <div class="ml-4 w-56">
-        <p class="text-slate-800 text-xl font-extrabold">{{ getUser.name }}</p>
-        <p class="text-slate-500">{{ getUser.email }}</p>
-      </div>
-    </div>
-    <button class="flex items-center justify-center gap-1 rounded-lg border border-emerald-500 px-4 py-2 font-medium text-emerald-500 focus:outline-none focus:ring hover:bg-emerald-100">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-4 w-4">
-        <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z" />
-      </svg>
+  <br><br><br>
 
-      <span>Sponsor</span>
-    </button>
+  <center>
+    <div class="m-10 max-w-sm">
+  <div class="rounded-lg border bg-white px-4 pt-8 pb-10 shadow-lg">
+    <div class="relative w-40 h-40 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+    <svg class="absolute-center w-40 h-40 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns=""><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
   </div>
-  <div class="mb-2 flex justify-between border-b py-8 text-sm sm:text-base">
-    <div class="flex flex-col items-center">
-      <p class="text-slate-700 mb-1 text-xl font-extrabold">0</p>
-      <p class="text-slate-500 text-sm font-medium">Posts</p>
-    </div>
-    <div class="flex flex-col items-center">
-      <p class="text-slate-700 mb-1 text-xl font-extrabold">0</p>
-      <p class="text-slate-500 text-sm font-medium">Followers</p>
-    </div>
-    <div class="flex flex-col items-center">
-      <p class="text-slate-700 mb-1 text-xl font-extrabold">0</p>
-      <p class="text-slate-500 text-sm font-medium">Sponsors</p>
-    </div>
-    <div class="flex flex-col items-center">
-      <p class="text-slate-700 mb-1 text-xl font-extrabold">0</p>
-      <p class="text-slate-500 text-sm font-medium">Awards</p>
-    </div>
-  </div>
-  <div class="flex justify-between py-8">
-    <button class="text-slate-500 hover:bg-slate-100 rounded-lg border-2 px-4 py-2 font-medium focus:outline-none focus:ring">Message</button>
-    <button class="rounded-lg border-2 border-transparent bg-blue-600 px-4 py-2 font-medium text-white focus:outline-none focus:ring hover:bg-blue-700">Follow</button>
+    <h1 class="my-1 text-center text-xl font-bold leading-8 text-gray-900"></h1>
+    <h3 class="font-lg text-semibold text-center leading-6 text-gray-600"></h3>
+    <p class="text-center text-sm leading-6 text-gray-500 hover:text-gray-600"></p>
+    <p class="text-center text-sm leading-6 text-gray-500 hover:text-gray-600"></p>
+    <ul class="mt-3 divide-y rounded bg-gray-100 py-2 px-3 text-gray-600 shadow-sm hover:text-gray-700 hover:shadow">
+      <li class="flex items-center py-3 text-sm">
+        <span>Name</span>
+        <span class="ml-auto">{{ user.name }}</span>
+      </li>
+      <li class="flex items-center py-3 text-sm">
+        <span>Email</span>
+        <span class="ml-auto">{{ user.email }}</span>
+      </li>
+      <li class="flex items-center py-3 text-sm" v-for="get in address.data">
+        <span>Address</span>
+        <span class="ml-auto">{{ get.address }} {{ get.city }} {{ get.state }} {{ get.postal_code }}</span>
+      </li>
+    </ul>
   </div>
 </div>
+</center>
 
 </template>
+
 <script>
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
     computed: {
-        ... mapGetters('user', ['getUser']),
+        ...mapGetters("auth", ["getUser"]),
+        ...mapGetters('auth', ['gettersUserAddress']),
+        user() {
+            return this.getUser;
+        },
+        address() {
+            return this.gettersUserAddress;
+  },
     },
     methods: {
-        ...mapActions('user', ["fetchUser"]),
+        ...mapActions("auth", ["getUserInfo"]),
+        ...mapActions('auth', ['getUserAddress']),
     },
-    created() {
-        this.fetchUser();
-    },
-}
+    async mounted() {
+       this.getUserAddress();
+       const user = await this.getUserInfo();
+
+      if (user) {
+      this.$store.commit('auth/SET_USER', user);
+  }
+},
+     created() {
+     this.getUserInfo();
+},
+};
 </script>

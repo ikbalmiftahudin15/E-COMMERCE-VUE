@@ -1,5 +1,5 @@
 <template>
-  <div class="relative py-12 sm:py-16 lg:pt-20 xl:pb-0">
+  <!-- <div class="relative py-12 sm:py-16 lg:pt-20 xl:pb-0">
     <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-3xl text-center">
         <h1 class="mt-5 text-3xl font-light leading-tight text-gray-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight">
@@ -24,6 +24,59 @@
         </div>
       </div>
     </div>
+  </div><br><br><br> -->
+
+  
+
+<div class="flex min-h-screen w-screen">
+  <div class="relative my-auto mx-auto flex flex-col px-4 sm:max-w-xl md:max-w-screen-xl md:flex-row">
+    <!-- Left Column -->
+    <div class="mx-auto flex w-full max-w-xl lg:max-w-screen-xl">
+      <div class="mb-16 lg:my-auto lg:max-w-lg">
+        <div class="mb-6 max-w-xl">
+          <h2 class="mb-6 max-w-lg text-3xl font-extrabold text-slate-700 sm:text-5xl sm:leading-snug">
+            Selamat Datang !
+            <span class="rounded- abg-gradient-to-r inline-block bg-sky-400 from-lime-400 to-sky-400 px-2 font-bold text-white">Syajewl</span>
+          </h2>
+          <p class="text-base text-gray-700 md:text-lg">Selamat berbelanja dan dapatkan perhiasan impian anda di Syajewl.</p>
+        </div>
+        <div class="flex items-center">
+          <a href="/produk" class="bg-sky-400a mr-6 inline-flex h-12 items-center justify-center rounded-full bg-gradient-to-r from-lime-400 to-sky-400 px-8 font-medium tracking-wide text-white shadow-lg shadow-sky-300 outline-none transition duration-200 hover:scale-110 hover:bg-sky-500 focus:ring"> Get product </a>
+        </div>
+      </div>
+    </div>
+    <!-- /Left Column -->
+
+    <!-- Right Column -->
+    <div class="flex h-full w-full space-x-3 overflow-hidden md:justify-end">
+      <!-- Col 2 -->
+      <div class="hidden w-56 items-center space-y-3 lg:flex">
+        <div class="overflow-hidden rounded-xl bg-yellow-400">
+          <img class="h-full w-full object-cover" src="../assets/4.jpg" alt="" />
+        </div>
+      </div>
+      <div class="w-full flex-col space-y-3 rounded-xl py-4 lg:flex lg:w-80">
+        <div class="h-40 overflow-hidden rounded-xl bg-green-600/60">
+          <img class="mx-auto h-full w-full object-cover" src="../assets/2.jpg" alt="" />
+        </div>
+        <div class="h-40 overflow-hidden rounded-xl bg-pink-600/60">
+          <img class="mx-auto h-full w-full object-cover" src="../assets/1.jpg" alt="" />
+        </div>
+        <div class="h-40 overflow-hidden rounded-xl bg-blue-600/60">
+          <img class="mx-auto h-full w-full object-cover" src="../assets/3.webp" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- /Right Column -->
   </div>
+</div>
+
+
+
+
+
+
+
+
 
 </template>

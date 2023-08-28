@@ -32,7 +32,7 @@
             <div class="lg:flex lg:items-start">
               <div class="lg:order-2 lg:ml-5">
                 <div class="max-w-xl overflow-hidden rounded-lg">
-                  <img class="h-full w-full max-w-full object-cover" src="../assets/11.jpg" alt="" />
+                  <img class="h-full w-full max-w-full object-cover" src="../assets/5.jpg" alt="" />
                 </div>
               </div>
 
@@ -41,15 +41,15 @@
                 <div class="flex flex-row items-start lg:flex-col">
                   <button type="button"
                     class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-gray-900 text-center">
-                    <img class="h-full w-full object-cover" src="../assets/11.jpg" alt="" />
+                    <img class="h-full w-full object-cover" src="../assets/5.jpg" alt="" />
                   </button>
                   <button type="button"
                     class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
-                    <img class="h-full w-full object-cover" src="../assets/11.jpg" alt="" />
+                    <img class="h-full w-full object-cover" src="../assets/5.jpg" alt="" />
                   </button>
                   <button type="button"
                     class="flex-0 aspect-square mb-3 h-20 overflow-hidden rounded-lg border-2 border-transparent text-center">
-                    <img class="h-full w-full object-cover" src="../assets/11.jpg" alt="" />
+                    <img class="h-full w-full object-cover" src="../assets/5.jpg" alt="" />
                   </button>
                 </div>
               </div>

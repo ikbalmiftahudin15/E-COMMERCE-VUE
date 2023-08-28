@@ -10,6 +10,7 @@ import Brands from "../views/Brands.vue";
 import Category from "../views/Category.vue";
 import SingleProduk from "../views/SingleProduk.vue";
 import Profile from "../views/Profile.vue";
+import PageOrder from "../views/PageOrder.vue";
 
 const routes = [
     {
@@ -32,15 +33,14 @@ const routes = [
     {
         path: "/cart",
         name: "Cart",
-        component: () => import("../views/Cart.vue"),
-        meta: { requiresLogin: true },
-    },
-  
+        component: Cart,
+        meta: { requiresLogin: false },
+      },
     {
         path: "/checkout",
         name: "Checkout",
-        component: () => import("../views/Checkout.vue"),
-        meta: { requiresLogin: true },
+        component: Checkout,
+        meta: { requiresLogin: false },
     },
   
     {
@@ -80,7 +80,13 @@ const routes = [
         component: Contact,
       
     },
-]
+    {
+        path:"/order/:orderCode",
+        name: "PageOrder",
+        component: PageOrder,
+        props: true,
+    },
+];
 
 const router = createRouter({
     history: createWebHistory(),

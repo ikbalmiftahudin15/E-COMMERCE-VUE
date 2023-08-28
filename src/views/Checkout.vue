@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">
-      <a href="#" class="text-2xl font-bold text-gray-800">sneekpeeks</a>
+      <a href="#" class="text-2xl font-bold text-gray-800">Syajewl</a>
       <div class="mt-4 py-2 text-xs sm:mt-0 sm:ml-auto sm:text-base">
           <div class="relative">
               <ul class="relative flex w-full items-center justify-between space-x-2 sm:space-x-4">
@@ -42,7 +42,7 @@
               <div v-for="product in getCart" :key="product.cart_id"
                   class="flex flex-col rounded-lg bg-white sm:flex-row">
                   <img class="m-2 h-24 w-28 rounded-md border object-cover object-center"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2dU3hIRKnft40eFVAwTxnEhFRGBGzaVlUaYFKLOlF3-ZRECCi9_oRQbX6u4z37j6K3AU&usqp=CAU"
+                      src="../assets/5.jpg"
                       alt="" />
                   <div class="flex w-full flex-col px-4 py-4">
                       <span class="font-semibold">{{ product.name }}</span>
@@ -53,6 +53,21 @@
           </div>
 
           <p class="mt-8 text-lg font-medium">Delivery Option</p>
+          <div class="relative">
+                  <input class="peer hidden" id="radio_2" type="radio" value="express" v-model="deliveryType" />
+                  <span
+                      class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
+                  <label
+                      class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
+                      for="radio_2">
+                      <img class="w-14 object-contain" src="../assets/exp.webp"
+                          alt="" />
+                      <div class="ml-5">
+                          <span class="mt-2 font-semibold">Express Delivery</span>
+                          <p class="text-slate-500 text-sm leading-6">Delivery: 1-2 Days</p>
+                      </div>
+                  </label>
+              </div>
           <form class="mt-5 grid gap-6">
               <div class="relative">
                   <input class="peer hidden" id="radio_1" type="radio" value="standard" v-model="deliveryType" />
@@ -69,21 +84,7 @@
                       </div>
                   </label>
               </div>
-              <div class="relative">
-                  <input class="peer hidden" id="radio_2" type="radio" value="express" v-model="deliveryType" />
-                  <span
-                      class="peer-checked:border-gray-700 absolute right-4 top-1/2 box-content block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
-                  <label
-                      class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
-                      for="radio_2">
-                      <img class="w-14 object-contain" src="https://componentland.com/images/naorrAeygcJzX0SyNI4Y0.png"
-                          alt="" />
-                      <div class="ml-5">
-                          <span class="mt-2 font-semibold">Fedex Delivery - Express</span>
-                          <p class="text-slate-500 text-sm leading-6">Delivery: 1-2 Days</p>
-                      </div>
-                  </label>
-              </div>
+              
           </form>
 
           <p class="mt-8 text-lg font-medium">Shipping Methods</p>
@@ -139,7 +140,7 @@
                       </svg>
                   </div>
               </div>
-              <label for="card-holder" class="mt-4 mb-2 block text-sm font-medium">Card Holder</label>
+              <!-- <label for="card-holder" class="mt-4 mb-2 block text-sm font-medium">Card Holder</label>
               <div class="relative">
                   <input type="text" id="card-holder" name="card-holder"
                       class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm uppercase shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
@@ -151,8 +152,8 @@
                               d="M15 9h3.75M15 12h3.75M15 15h3.75M4.5 19.5h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5zm6-10.125a1.875 1.875 0 11-3.75 0 1.875 1.875 0 013.75 0zm1.294 6.336a6.721 6.721 0 01-3.17.789 6.721 6.721 0 01-3.168-.789 3.376 3.376 0 016.338 0z" />
                       </svg>
                   </div>
-              </div>
-              <label for="card-no" class="mt-4 mb-2 block text-sm font-medium">Card Details</label>
+              </div> -->
+              <!-- <label for="card-no" class="mt-4 mb-2 block text-sm font-medium">Card Details</label>
               <div class="flex">
                   <div class="relative w-7/12 flex-shrink-0">
                       <input type="text" id="card-no" name="card-no"
@@ -174,7 +175,7 @@
                   <input type="text" name="credit-cvc"
                       class="w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500"
                       placeholder="CVC" />
-              </div>
+              </div> -->
               <label for="billing-address" class="mt-4 mb-2 block text-sm font-medium">Billing Address</label>
               <div class="flex flex-col sm:flex-row">
                   <div class="relative flex-shrink-0 sm:w-7/12">
@@ -195,7 +196,7 @@
                       placeholder="ZIP" />
               </div>
 
-              <!-- Total -->
+              Total
               <div class="mt-6 border-t border-b py-2">
                   <div class="flex items-center justify-between">
                       <p class="text-sm font-medium text-gray-900">Subtotal</p>
@@ -211,8 +212,9 @@
                   <p class="text-2xl font-semibold text-gray-900">Rp.{{ totalHarga() }}</p>
               </div>
           </div>
-          <button @click="performCheckout"
-              class="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">Place Order</button>
+          <router-link to="/order">
+          <button @click="performCheckout" class="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">Place Order</button>
+        </router-link>
       </div>
   </div>
 </template>
@@ -229,6 +231,7 @@ export default {
   },
   computed: {
       ...mapGetters('cart', ['getCart']),
+      ...mapGetters('cart', ['getCheckout']),
 
   },
   methods: {
@@ -261,8 +264,11 @@ export default {
           };
 
           // Call the checkout action with the collected IDs and user address
-          await this.$store.dispatch('cart/checkoutCart', checkoutPayload);
-      }
+          await this.$store.dispatch('cart/checkoutCart', checkoutPayload)
+           .then(() => {
+              this.$router.push(`/order/${this.getCheckout.order_code}`);
+            });
+      },
   },
   beforeMount() {
       this.fetchProduk();
