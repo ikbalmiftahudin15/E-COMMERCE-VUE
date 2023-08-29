@@ -184,7 +184,7 @@
                           placeholder="Street Address" />
                       <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
                           <img class="h-4 w-4 object-contain"
-                              src="https://flagpack.xyz/_nuxt/4c829b6c0131de7162790d2f897a90fd.svg" alt="" />
+                              src="../assets/feed.jpg" alt="" />
                       </div>
                   </div>
                   <select type="text" name="billing-state"
