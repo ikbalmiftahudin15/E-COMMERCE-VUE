@@ -9,7 +9,7 @@
           <a href="#">
             <img
               class="h-50 rounded-t-lg object-cover"
-              src="../assets/5.jpg"
+              src="../assets/1.jpg"
               alt="product image"
             />
           </a>
