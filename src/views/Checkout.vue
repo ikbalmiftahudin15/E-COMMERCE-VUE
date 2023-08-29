@@ -113,7 +113,7 @@
                       class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
                       for="radio_4">
                       <img class="w-14 object-contain"
-                          src="https://png.pngtree.com/png-clipart/20190904/original/pngtree-orange-wallet-icon-png-image_4462385.jpg"
+                          src="../assets/pw.png"
                           alt="" />
                       <div class="ml-5 mt-4">
                           <span class="mt-16 font-semibold leading-6">Payment Wallet</span>
