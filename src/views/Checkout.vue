@@ -42,7 +42,7 @@
               <div v-for="product in getCart" :key="product.cart_id"
                   class="flex flex-col rounded-lg bg-white sm:flex-row">
                   <img class="m-2 h-24 w-28 rounded-md border object-cover object-center"
-                      src="../assets/1.jpg"
+                      src="src/assets/1.jpg"
                       alt="" />
                   <div class="flex w-full flex-col px-4 py-4">
                       <span class="font-semibold">{{ product.name }}</span>
@@ -97,7 +97,7 @@
                       class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
                       for="radio_3">
                       <img class="w-14 object-contain"
-                          src="../assets/pw.png"
+                          src="src/assets/pw.png"
                           alt="" />
                       <div class="ml-5 mt-4">
                           <span class="mt-2 font-semibold">Cash Or Duel</span>
@@ -113,7 +113,7 @@
                       class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4"
                       for="radio_4">
                       <img class="w-14 object-contain"
-                          src="../assets/pw.png"
+                          src="src/assets/pw.png"
                           alt="" />
                       <div class="ml-5 mt-4">
                           <span class="mt-16 font-semibold leading-6">Payment Wallet</span>
@@ -184,7 +184,7 @@
                           placeholder="Street Address" />
                       <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
                           <img class="h-4 w-4 object-contain"
-                              src="../assets/feed.jpg" alt="" />
+                              src="src/assets/feed.jpg" alt="" />
                       </div>
                   </div>
                   <select type="text" name="billing-state"
